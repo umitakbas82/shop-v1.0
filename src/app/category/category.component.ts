@@ -11,11 +11,11 @@ export class CategoryComponent implements OnInit {
   constructor() { }
   title="Category List";
   categories:Category[]=[
-    {categoryId:1,categoryName:"Electronics"},
-    {categoryId:2,categoryName:"Mobile"},
-    {categoryId:3,categoryName:"TV"},
-    {categoryId:4,categoryName:"Fridges"},
-    {categoryId:5,categoryName:"Washing Machine"},
+    {id:1,name:"Electronics"},
+    {id:2,name:"Mobile"},
+    {id:3,name:"TV"},
+    {id:4,name:"Fridges"},
+    {id:5,name:"Washing Machine"},
   ]
 
   ngOnInit(): void {
