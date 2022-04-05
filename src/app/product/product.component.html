@@ -5,7 +5,11 @@
     class="form-control" 
     id="productName" 
     aria-describedby="emailHelp"
-    placeholder="Enter Your Search">
+    placeholder="Enter Your Search"
+    (ngModel)="filterText!"
+    />
+    <small *ngIf="filterText!" class="form-text text-muted"></small>
+
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 </div>
 
@@ -16,7 +20,7 @@
             No Product On This Category
         </div>
     </ng-template>
-    <div *ngFor="let product of products " class="card" style="width: 18rem;">
+    <div *ngFor="let product of products | productFilter:filterText " class="card" style="width: 18rem;">
         <img src="{{product.imageUrl}}" class="card-img-top" alt="...">
         <div class="card-body">
             <h5 class="card-title">{{product.name }} {{product.price | currency:'USD':true:"1.2-2"}}</h5>
