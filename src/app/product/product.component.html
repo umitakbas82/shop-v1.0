@@ -25,6 +25,6 @@
         <div class="card-body">
             <h5 class="card-title">{{product.name }} {{product.price | currency:'USD':true:"1.2-2"}}</h5>
             <p class="card-text">{{product.description}}</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a (click)="addToCart" class="btn btn-primary">Add To Cart</a>
         </div>
     </div>
